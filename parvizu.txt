@@ -1,0 +1,39 @@
+Author: Pablo Arvizu, parvizu@ischool.berkeley.edu
+
+HW1 - Browsers
+
+1. Experience with web architecture, HTML, javascript:
+I have some experience with web architecture but it was from a while back. I have a couple of 
+java certifications (Java Programmer 1.4 and Java Web Component Developer) that got while at 
+college but I never really used them professionally. I have  CS Degree and after school I did 
+web development for a couple of years (ColdFusion, HTML, CSS and Javascript) but nothing 
+really advanced. 
+After that I spent the 4.5 years working as a Data Management consultant with minimal 
+development to be honest. I do have experience with HTML and javascript (AJAX) and have been 
+trying to learn HTML5 and JQuery for the past few months but have not gotten very far. 
+Even though I know the main concepts of web architecture I do feel that I need to get up to 
+date with the latest technologies and practices since my knowledge has been mostly 
+theoretical and from a while back.
+
+2. Favorite features from 2 browsers:
+Firefox: I like the fact that it has plugins like Firebug which I have used to debug web 
+projects. I like that is feels more integrated than others with multiple features available 
+developed by third parties or even independent programmers. I do believe that it has more 
+security features than the others but in general I like the fact that it does not consume all 
+the resources of my computer like chrome does.
+Chrome: I am torn on the single search/address field that chrome introduced. For once it 
+easier to use but in the end I think everything goes through the Google servers regardless of 
+if it is a search or a particular address. I really like some plugins/add-ons and the 
+integration with Google products. The plugin I like the most is the Chrome Remote Desktop 
+which allows users to connect to other computers/desktops through the browser. Even though it 
+might not be the best option perfomance-wise the fact that it can be done easily by the user 
+without a complicated installation and setup goes a long way for me. Besides I only use it 
+when I need something from my computer at home not to work a full day remotely through it. 
+What I really do not like of Chrome is the bad use of memory, especially with the multiple 
+renderer instances that consume all of my resources. 
+Safari: What I like about Safari is its stability, not sure if that counts as a feature. 
+Another feature that I like and I think it was the first to introduce it was that your recent 
+websites or your favorites appear in a sort of preview when you open the browser or a tab.
+
+
+

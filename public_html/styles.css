@@ -1,0 +1,83 @@
+@charset "UTF-8";
+/* CSS Document */
+
+img
+{
+	margin:15px;
+}
+
+.section
+{
+	margin-top: 20px;
+	margin-bttom: 20px;
+		
+}
+
+.sectionHeader
+{
+	width:100%;
+	border-bottom: thin solid #666;
+	font-weight:bold;
+}
+
+.sectionBody
+{
+	padding: 20px;	
+}
+
+#profileImg
+{
+	float:right;
+	left: 100px;	
+	height: 120px;
+	margin:15px;
+}
+
+p
+{
+	padding:5px;	
+}
+
+#mainImg
+{
+	text-align:center;	
+}
+
+#mainImg2
+{
+	height:600px;
+	width:100%
+	background-image: url(http://sunsite.berkeley.edu/FindingAids/dynaweb/calher/cook/figures/I0051854A.jpg);
+	background-position: -60px -800px;
+	display: none;
+	text-align:center;	
+}
+
+#gobears
+{
+	text-align:right;
+	display:none;
+	position:fixed;
+	top: 100px;
+	right: 200px;
+	border-radius:10px;
+	background-color: rgba(0,0,0,.6);
+	padding:20px;
+}
+
+#gobears a
+{
+	color:#FFF;	
+}
+
+.video
+{
+	padding-right:40px;
+	padding-left:40px;	
+		
+}
+
+#links li
+{
+	margin-top:40px;	
+}

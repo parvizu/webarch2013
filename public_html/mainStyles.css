@@ -1,0 +1,85 @@
+/*mainstyles.css Stylesheet used to define the main caracteristics used to construct the general layout of the website, like the menu, links, and header.
+*/
+
+/* General website area, used mostly to define the alignment and centering of the whole website */
+#contentWrapper
+{
+	text-align:center;
+	margin:10px;
+	min-width:740px;
+}
+
+/* The following are used to define main properties of the header of the website */
+header
+{
+	background-image: url(http://www.garnerhosting.com/images/backgrounds/header-background.jpg);  /* I used a random background found on google */
+	color: #FFF;
+	border-radius: 7px;
+}
+
+#headerImg
+{
+	height: 80px;
+}
+
+#mainHeader
+{
+	padding: 15px;	
+	font-size:36px;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+/* The following definitions are used to style the main menu bar */
+nav ul
+{
+	list-style-type:none; /* used to remove the bullets from the <ul> */
+	margin:0px;
+	background-color:rgba(153,153,153,.4);
+	border-bottom-left-radius: 7px;
+	border-bottom-right-radius: 7px;
+	padding: 15px;
+	border: thin solid #666;
+}
+
+/* Caracteristics of the button of the menu */
+.menuButton
+{
+	display:inline;
+	margin: 15px;
+	padding: 20px;
+	text-align:center;
+	vertical-align:middle;
+	min-width:150px;
+}
+
+.menuButton a
+{
+	text-decoration:none;
+	color:#FFF;	
+}
+
+.menuButton:hover
+{
+	cursor:pointer;
+	background-color:rgba(153,153,153,1);
+	border-radius:2px;
+	
+}
+
+img
+{
+	border-radius:5px;	
+}
+
+/* These properties are applied to the main area of the website where the content will be displayed */
+main
+{
+	margin-top: 10px;
+	padding: 20px;
+	border: #666 thin solid;
+	border-radius:7px;	
+	/*height:450px;*/
+	text-align:left;
+	font-family:Georgia, "Times New Roman", Times, serif;
+}
+

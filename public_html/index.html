@@ -1,9 +1,120 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Jim's Page</title>
-    </head>
-    <body>
-        <p>Hello world! This is a tiny HTML page.</p>
-    </body>
+<!DOCTPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link type="text/css" href="mainStyles.css" rel="stylesheet">
+    <link type="text/css" href="styles.css" rel="stylesheet">
+<title>Personal Page - Pablo Arvizu</title>
+</head>
+
+<body>
+	<a name="main"></a> 
+	<div id="contentWrapper">
+    	<!-- Header with the navigation menu -->
+    	<header>
+        	<div id="mainHeader">Pablo Arvizu</div>
+            <nav>
+                <ul>
+                    <li class="menuButton"><a href="#home">About me</a></li>
+                    <li class="menuButton"><a href="#classes">Fall Schedule</a></li>
+                    <li class="menuButton"><a href="#interests">Interests</a></li>
+                    <li class="menuButton"><a href="#links">Links</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <!-- Main section where the information will be displayed -->
+        <main>
+        	<a name="home"></a> 
+            <div id="home" class="section"> 
+                <div class="sectionHeader">
+                    <h3>About me</h3>
+                </div>
+                <div class="sectionBody">
+                    <img id="profileImg" src="http://m.c.lnkd.licdn.com/mpr/mpr/shrink_200_200/p/1/000/246/352/0468c42.jpg">
+                    <p>
+                        Hello everybody!
+                    </p>
+                    <p>I am a first year masters student, and used to be a Data Analyst & Management Consultant from Mexico but I like to consider myself as a Web Developer at heart. After spending some time working in Mexico and the United States I decided it was time to continue my studies; actually I felt it was kind of a now or never moment for me. 
+                    </p>
+                    <p>
+                        I am currently studying at the <a href="" onClick="document.getElementById('mainImg').style.display='none'; document.getElementById('mainImg2').style.display='inline'; return false;" > I School </a>at the University of California, Berkeley (<a href="" onClick="document.getElementById('gobears').style.display='inline';return false;"> Go Bears! </a>) and was I am hoping is to find a middle area between software/web development and data analysis/visualization because I have learned throughout the years that I can't do one or the other full time, as I tend to get bored easily. So my goal is to find an area that has a little bit of both from time to time.
+                    </p>
+                    <div id="mainImg">
+                    	<img src="http://www.immerscom.org/2009/images/800px-South_Hall--UC_Berkeley--Panoramic.jpg">
+                    	
+                    </div>
+                    <div id="mainImg2">
+                    	<img src="http://sunsite.berkeley.edu/FindingAids/dynaweb/calher/cook/figures/I0051854A.jpg">
+                    </div>
+                    
+                    <!-- "Hidden" video... -->
+                    <div id="gobears">
+                    	<a href="" onClick="document.getElementById('gobears').style.display='none'; return false;">Close</a><br>
+                    	<iframe width="640" height="480" src="http://www.youtube.com/embed/mfebpLfAt8g?rel=0" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- section with the information of my schedule -->
+            <div id="" class="section">
+            	<a name="classes"></a> 
+                <div class="sectionHeader">
+                    <h3>MIMS Fall 2013</h3>
+                </div>
+                <div class="sectionBody">
+                	<p>This is my schedule for the Fall 2013 semester at the I School. I am taking 16 units in 6 classes, although 2 of them are seminars and only last one month.</p>
+                    <img src="http://www.parvizu.com/MIMS/classSchedule.png">
+                </div>
+            </div>
+            
+        	<!-- section with my personal interests -->
+        	<div id="" class="section">
+            	<a name="interests"></a> 
+                <div class="sectionHeader">
+                    <h3>Personal Interests</h3>
+                </div>
+                <div class="sectionBody">
+                	<p>I am pasionate about many things like movies (I have a DVD collection back at home), camping, but above all sports. I love futbol (soccer), basketball and football mostly but I also a big fan of the Olympics. I like to read mostly biographies although I haven't read any lately. </p>
+               		<p>
+                    	In sports I am a big fan of:<br>
+                        <ul>
+                        	<li>Mexico National Football Team (above all)</li>
+                            <li>Pumas UNAM (home club in Mexico)</li>
+                            <li>Manchester United (England and Europe in general)</li>
+                            <li>Los Angeles Lakers</li>
+                            <li>and now Cal Bears!</li>
+                        </ul>
+                    </p>
+                    
+                    <p>On a random note, this is the commercial I like the most. It was done to celebrate the 20 years of the "Just do it" campaign of Nike. <strong>Just watch it, it is awesome!</strong></p>
+                    <div class="video">
+                    	<iframe width="640" height="480" src="http://www.youtube.com/embed/ONuQ_CeY2mU?rel=0" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- section with links -->
+            <div id="links" class="section">
+            	<a name="links"></a> 
+                <div class="sectionHeader">
+                    <h3>Links</h3>
+                </div>
+                <div class="sectionBody">
+                	<ol>
+                    	<li>My personal sports site/blog. It's been a while since I've written anything but I plan on getting back to it as soon as I catch up with my readings from school.</li>
+                        <br><h2><a href="http://www.morethanjustsports.com" target="_blank">MorethanjustSports</a></h2>
+                   
+                	<iframe height="250" width="80%" src="http://www.morethanjustsports.com"></iframe>
+                    
+                    	<li>My personal profile on LinkedIn</li>
+                        <br><h2><a href="http://www.linkedin.com/" target="_blank">LinkedIn</a></h2>
+                    
+                   
+                     </ol>
+                </div>
+            </div>
+            
+        </main>
+    </div>
+</body>
 </html>

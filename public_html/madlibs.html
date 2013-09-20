@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Madlibs - Pablo Arvizu</title>
+	<style type="text/css">
+		#container
+		{
+			text-align:center;
+		}
+	
+    	#video
+		{
+			display:none;	
+		}
+		
+		#madlib
+		{
+			width: 750px;
+			margin: 20px;
+			text-align:left;
+			border-radius:5px;
+			background-color:#CCC;
+			padding:10px;
+			font-size:16px;
+			font-family:Arial, Helvetica, sans-serif;
+			
+		}
+		
+		input
+		{
+			padding:5px;
+			border-radius:5px;	
+			width: 200px;
+			font-size:16px;
+		}
+		
+		input[type=checkbox], input[type=radio]
+		{
+			width:15px;	
+		}
+		
+		td
+		{
+			text-align:left;
+			vertical-align:top;
+			padding: 5px;
+			border-radius:5px;
+		}
+		
+		.questionLabel
+		{
+			font-size:20px;
+			text-align:right;	
+		}
+    </style>
+</head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="madlibs.js"></script>
+<body>
+	<div id="container">
+    	<img src="http://popculturenerd.com/wp-content/uploads/2012/11/MadLibs-Logo.png" width="700">
+        <form id="input">
+        <table align="center">
+            <tr>
+                <td class="questionLabel"><label for="person1">Woman you know:</label></td>
+                <td><input type="text" id="person1" name="person1" value=""/></td>
+            </tr>
+            <tr>
+                <td class="questionLabel"><label for="person2">Person you admire: </label></td>
+                <td><input type="text" id="person2" name="person2" value=""/></td>
+            </tr>
+            <tr>
+                <td class="questionLabel"><label for="personality">Personality/Historical Figure/Celebrity: </label></td>
+                <td><input type="text" id="personality" name="personality" value=""/></td>
+            </tr>
+            <tr>
+                <td class="questionLabel"><label>Gender:</td>
+                <td> <input type="radio" name="p2gender" value="his">Male<br>
+            <input type="radio" name="p2gender" value="her" checked>Female</label></td>
+            </tr>
+            <tr>
+                <td class="questionLabel"><label for="place">Event, Place or Show</label></td>
+                <td><input type="text" id="place" name="place" value=""></td>
+            </tr>
+            <tr>
+                <td class="questionLabel"><label for="">Number</label></td>
+                <td><input name="number" id="number" type="text" value=""></td>
+            </tr>
+            <tr>
+                <td class="questionLabel"><label for="eventType">Choose an Event Type:</label></td>
+                <td><select id="eventType" name="eventType">
+                <option value="sporting">Sports</option>
+                <option value="musical">Music</option>
+                <option value="tv">TV</option>
+                <option value="web">Internet</option>
+                <option value="dancing">Dance</option>
+            </select></td>
+            </tr>
+            <tr>
+                <td class="questionLabel"><label for="phrase">Catchphrase/Slogan/Expression/Quote:</label></td>
+                <td><input type="text" id="phrase" name="phrase" value=""></td>
+            </tr>
+            <tr>
+                <td class="questionLabel"><label for="activity">Physical activity:</label></td>
+                <td><input type="text" value="" id="activity" name="activity"></td>
+            </tr>
+            <tr>
+                <td class="questionLabel">Activity:</td>
+                <td id="cbox"><input type="checkbox" name="characteristic" value="flexibility">Flexibility<br>
+                <input type="checkbox" name="characteristic" value="intelligence">Intelligence<br>
+                <input type="checkbox" name="characteristic" value="long hair">Long hair<br>
+                <input type="checkbox" name="characteristic" value="rhythm">Rhythm<br>
+                <input type="checkbox" name="characteristic" value="acting chops">Acting chops<br>
+                <input type="checkbox" name="characteristic" value="bad taste">Bad taste<br>
+                <input type="checkbox" name="characteristic" value="stupid decisions">Stupid decisions<br>
+                <input type="checkbox" name="characteristic" value="blackouts">Blackouts</td>
+            </tr>
+            <tr>
+                <td class="questionLabel"><label for="adjective">Adjective:</label></td>
+                <td><input type="text" id="adjective" name="adjective" value=""></td>
+            </tr>
+            <tr>
+                <td class="questionLabel"><label for="bodyPart">Body part: </label></td>
+                <td><input type="text" id="bodyPart" name="bodyPart" value=""></td>
+            </tr>
+            <tr>
+            	<td class="questionLabel"><label for="band">Music band/group: </label></td>
+                <td><input type="text" id="band" name="band" value=""></td>
+            </tr>
+            <tr>
+            	<td colspan="2"><input type="button" id="submit" value="Mad Libs!"></td>
+            </tr>
+        </table>
+        </form>
+        <hr>
+        <div id="madlib">
+            
+            
+        </div>
+    </div>
+</body>
+</html>

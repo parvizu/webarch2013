@@ -46,7 +46,7 @@ def wiki_put():
     `url` key to set the redirect destination."""
     wikipedia = request.form.get('url', 'http://en.wikipedia.org')
     db['wiki'] = wikipedia
-    return "Stored wiki => " + wikipedia
+    return "Stored wiki => " + wikipedia	
 
 ###
 # i253 Resource:
@@ -60,10 +60,12 @@ def wiki_put():
 def i253():
     """Returns a PNG image of madlibs text"""
     relationship = request.args.get("relationship", "friend")
+    accept = request.headers["Accept"]
     name = request.args.get("name", "Jim")
     adjective = request.args.get("adjective", "fun")
 
-    resp = flask.make_response(
+    if accept == "image/png":
+        resp = flask.make_response(
             check_output(['convert', '-size', '600x400', 'xc:transparent',
                 '-frame', '10x30',
                 '-font', '/usr/share/fonts/liberation/LiberationSerif-BoldItalic.ttf',
@@ -73,11 +75,11 @@ def i253():
                   "text 30,60 'My %s %s said i253 was %s'" % (relationship, name, adjective),
                 '-raise', '30',
                 'png:-']), 200);
-    # Comment in to set header below
-    # resp.headers['Content-Type'] = '...'
-
+        resp.headers['Content-Type'] = 'image/png'
+    else:
+	    resp = "My "+relationship +" "+name+" said i253 was "+adjective;	
     return resp
-
 
 if __name__ == "__main__":
     app.run(port=int(environ['FLASK_PORT']))
+	

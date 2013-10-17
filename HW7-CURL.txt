@@ -1,0 +1,25 @@
+Homework 7
+Web Architecture
+
+Pablo Arvizu
+
+What's the difference between Yelp's Homepage compressed and uncompressed?
+
+With the compressed option CURL gets the compressed version of the Yelp homepage of (~18k). Since I used a pipe to save the output to a text file (hw7Compressed.txt), apparently curl command uncompresses the data received and saves it to the file. The compressed output file is the same size as a the uncompressed one.
+In order to accept the data as a compressed file we need to tell the CURL to accept a gzip file (-H "accept-encoding: gzip") instead of the --compressed option.
+
+Pablo-Arvizus-MacBook-Pro:webarch2013 galahad$ curl "http://www.yelp.com" --compressed > hw7Compressed.txt
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 18366    0 18366    0     0  31039      0 --:--:-- --:--:-- --:--:-- 31996
+
+Pablo-Arvizus-MacBook-Pro:webarch2013 galahad$ curl "http://www.yelp.com"  > hw7Uncompressed.txt
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 84943  100 84943    0     0   128k      0 --:--:-- --:--:-- --:--:--  130k
+
+Pablo-Arvizus-MacBook-Pro:webarch2013 galahad$ curl -H "accept-encoding: gzip" "http://www.yelp.com"  > hw7CompressedGzip.gzip
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 18563    0 18563    0     0  44304      0 --:--:-- --:--:-- --:--:-- 47234
+

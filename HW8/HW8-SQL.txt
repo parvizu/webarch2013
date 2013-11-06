@@ -1,0 +1,134 @@
+Pablo Arvizu
+Web Architecture
+
+Homework 8 - DB
+
+SELECT	
+
+mysql> Select count(*) from links WHERE created >"2013-10-14"
+    -> ;
++----------+
+| count(*) |
++----------+
+|       10 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> Select count(*) from links WHERE created <"2013-10-14" AND hit_count<40;
++----------+
+| count(*) |
++----------+
+|        3 |
++----------+
+1 row in set (0.00 sec)
+
+
+INSERT
+
+mysql> INSERT Into links (long_url,short_url,hit_count,created) VALUES ("http://people.ischool.berkeley.edu/~parvizu/webarch2013/","pablo",100,"2013-11-01");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> SELECT * FROM links;
++----------------------------------------------------------+-----------+-----------+------------+
+| long_url                                                 | short_url | hit_count | created    |
++----------------------------------------------------------+-----------+-----------+------------+
+| http://163.com                                           | 80650     |       170 | 2013-10-19 |
+| http://amazon.com                                        | b4556     |        78 | 2013-10-21 |
+| http://baidu.com                                         | 71bce     |        88 | 2013-10-20 |
+| http://bing.com                                          | 38c1c     |       204 | 2013-10-25 |
+| http://blogspot.com                                      | 04789     |       169 | 2013-09-29 |
+| http://ebay.com                                          | b0f7e     |       125 | 2013-09-23 |
+| http://google.co.in                                      | f1ab0     |       134 | 2013-09-11 |
+| http://google.de                                         | 5f379     |        76 | 2013-09-09 |
+| http://hao123.com                                        | 9e898     |        65 | 2013-09-09 |
+| http://linkedin.com                                      | d4234     |        14 | 2013-10-06 |
+| http://live.com                                          | d2c05     |       202 | 2013-09-23 |
+| http://m.yelp.com                                        | nakse     |        52 | 2013-10-24 |
+| http://people.ischool.berkeley.edu/~parvizu/webarch2013/ | pablo     |       100 | 2013-11-01 |
+| http://qq.com                                            | cab9d     |        23 | 2013-10-16 |
+| http://sina.com.cn                                       | f3770     |        43 | 2013-10-17 |
+| http://taobao.com                                        | dd29a     |        48 | 2013-10-04 |
+| http://tumblr.com                                        | 27ca7     |       115 | 2013-10-25 |
+| http://twitter.com                                       | 77532     |        50 | 2013-10-19 |
+| http://vk.com                                            | 4cb96     |        96 | 2013-09-23 |
+| http://wikipedia.org                                     | e249b     |       151 | 2013-10-28 |
+| http://wordpress.com                                     | 8686e     |        48 | 2013-09-27 |
+| http://www.facebook.com                                  | adfer     |        45 | 2012-10-22 |
+| http://www.google.com                                    | qwelmw    |         2 | 2012-10-19 |
+| http://www.youtube.com                                   | youtu     |        29 | 2012-11-19 |
+| http://yahoo.co.jp                                       | 8b26f     |       132 | 2013-10-06 |
+| http://yahoo.com                                         | e773f     |        74 | 2013-10-14 |
+| http://yandex.ru                                         | e9af1     |        55 | 2013-09-04 |
++----------------------------------------------------------+-----------+-----------+------------+
+27 rows in set (0.00 sec)
+
+No, it's not possible because all operations in the DB have the property of atomicity, which means all changes will be displayed once they are finished. The inserted row cannot be seen until it all has been added (all its columns).
+
+UPDATE
+
+mysql> UPDATE links set hit_count = 400 where short_url = 'pablo';
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from links
+    -> ;
++-------------------------------------------------------------+-------------+-----------+------------+
+| long_url                                                    | short_url   | hit_count | created    |
++-------------------------------------------------------------+-------------+-----------+------------+
+| eviephan.com                                                | eevee       |        51 | 2013-09-01 |
+| http://163.com                                              | 80650       |       177 | 2013-10-19 |
+| http://amazon.com                                           | b4556       |        98 | 2013-10-21 |
+| http://baidu.com                                            | 71bce       |       152 | 2013-10-20 |
+| http://be.ucsd.edu                                          | ucsdBE      |      9001 | 2009-11-23 |
+| http://berkeleypbl.com                                      | pblcm       |        42 | 2013-11-02 |
+| http://bing.com                                             | 38c1c       |        59 | 2013-10-25 |
+| http://blogspot.com                                         | 04789       |        34 | 2013-09-29 |
+| http://carinaboo.com/                                       | cgboo       |       186 | 2013-09-30 |
+| http://ebay.com                                             | b0f7e       |        21 | 2013-09-23 |
+| http://facebook.com                                         | fbk         |       100 | 2010-10-10 |
+| http://google.co.in                                         | f1ab0       |       143 | 2013-09-11 |
+| http://google.de                                            | 5f379       |        43 | 2013-09-09 |
+| http://hao123.com                                           | 9e898       |       178 | 2013-09-09 |
+| http://linkedin.com                                         | d4234       |       158 | 2013-10-06 |
+| http://live.com                                             | d2c05       |        46 | 2013-09-23 |
+| http://m.yelp.com                                           | nakse       |       151 | 2013-10-24 |
+| http://meliora.cc                                           | molly       |        10 | 2010-10-10 |
+| http://people.ischool.berkeley.edu/~jackar/webarch2013/     | jackar      |        80 | 0000-00-00 |
+| http://people.ischool.berkeley.edu/~jlo/webarch2013/        | jlo_webarch |       191 | 2013-10-08 |
+| http://people.ischool.berkeley.edu/~parvizu/webarch2013/    | pablo       |       400 | 2013-09-10 |
+| http://people.ischool.berkeley.edu/~robyn/webarch2013/      | robyn       |        20 | 2013-09-30 |
+| http://people.ischool.berkeley.edu/~siddharth/server/shorts | srturl      |       132 | 2013-10-13 |
+| http://qq.com                                               | cab9d       |       195 | 2013-10-16 |
+| http://sina.com.cn                                          | f3770       |       170 | 2013-10-17 |
+| http://sophiebarness.com                                    | 12345       |        62 | 2012-10-31 |
+| http://sox.ytmnd.com/                                       | Deb-GoSox   |       190 | 1918-09-11 |
+| http://taobao.com                                           | dd29a       |       159 | 2013-10-04 |
+| http://tumblr.com                                           | 27ca7       |        20 | 2013-10-25 |
+| http://twitter.com                                          | 77532       |        15 | 2013-10-19 |
+| http://vk.com                                               | 4cb96       |         7 | 2013-09-23 |
+| http://wikipedia.org                                        | e249b       |       185 | 2013-10-28 |
+| http://wordpress.com                                        | 8686e       |        96 | 2013-09-27 |
+| http://www.dailycal.org                                     | sandr       |       120 | 2013-10-10 |
+| http://www.facebook.com                                     | adfer       |       105 | 2012-10-22 |
+| http://www.feministing.com                                  | fem         |       159 | 2013-10-13 |
+| http://www.google.com                                       | qwelmw      |        73 | 2012-10-19 |
+| http://www.marketwatch.com/                                 | marwtch     |       101 | 2010-10-10 |
+| http://www.sfgate.com                                       | sfnews      |        82 | 2013-10-01 |
+| http://www.testURL.com                                      | test        |       182 | 2013-10-13 |
+| http://www.tutorialspoint.com/mysql/index.htm               | 1cx0xys     |        88 | 2013-10-01 |
+| http://www.twitter.com                                      | eovle       |       150 | 2013-10-01 |
+| http://www.youtube.com                                      | youtu       |       159 | 2012-11-19 |
+| http://yahoo.co.jp                                          | 8b26f       |       142 | 2013-10-06 |
+| http://yahoo.com                                            | e773f       |        25 | 2013-10-01 |
+| http://yandex.ru                                            | e9af1       |        94 | 2013-09-04 |
+| people.ischool.berkeley.edu/~kikiliu/webarch2013/           | kikiliu     |       189 | 2011-11-22 |
++-------------------------------------------------------------+-------------+-----------+------------+
+47 rows in set (0.00 sec)
+
+mysql> SELECT hit_count FROM links where short_url = 'pablo';
++-----------+
+| hit_count |
++-----------+
+|       400 |
++-----------+
+1 row in set (0.00 sec)

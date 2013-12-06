@@ -26,22 +26,24 @@ def main():
 
     csv_writer = csv.writer(stdout)
     current_user = None
-
+    new = None
+    
     for line in fileinput.input():
         cell = csv_readline(line)
         if cell[0] == 'C':
             ###
             # FILL IN by replacing below:
-            pass
+            pass 
             # What should we update when we see a new 'C' row?
             ##/
+            current_user = cell[1]
         elif cell[0] == 'V':
             ###
             # FILL IN by replacing below:
             pass
             # What should we update when we see a new 'V' row?
             ##/
-
+            cell.append(current_user)
         csv_writer.writerow(cell)
 
 
